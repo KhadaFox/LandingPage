@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    color: #9b5bbf;
+    text-align: center;
+    position: relative;
+    background-image: url('img/Logo.jpg');
+    background-size: cover;
+    background-position: center; 
+    height: 425px;
+    z-index: 1;
+    max-width: 800px;
+    transform: translate(-50%, 0%);
+    top: 50%;
+    left: 50%;
+}
+
+/* Media Queries header-content */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 10% 5%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-content {
+        padding: 10% 7%;
+        width: 85%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header-content {
+        padding: 5% 10%;
+        width: 80%;
+    }
+}
+
+section {
+    padding: 35px;
+    background: #333; 
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.modulo1 {
+    margin-top: 20px;
+}
+
+.benefits {
+    display: block; 
+    width: 100%; 
+}
+
+.benefit {
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px; 
+    background: #242424;
+    border-radius: 5px; 
+}
+
+.benefit:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(155, 91, 191, 0.2);
+}
+
+.benefit.left,
+.benefit.right {
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit.left {
+    margin-left: 0;
+}
+
+.benefit.right {
+    margin-left: auto;
+    text-align: right;
+}
+
+.cta-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #242424;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.cta-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cta-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cta-form button {
+    background: #9b5bbf;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-form button:hover {
+    background: #7b4ca8;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(12, 12, 12, 0.85);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 15px 20px;
+    }
+    .benefits, .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefit, .testimonial {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-content {
+        padding: 15px 30px;
+    }
+    .benefit, .testimonial {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header-content {
+        padding: 15px 50px;
+    }
+}
+.testimonial {
+    width: 90%;
+    max-width: 600px;
+    background: #242424;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(155, 91, 191, 0.2);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonial span {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    cursor: pointer;
+    background: #242424;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-answer {
+    padding: 10px;
+    background: #333;
+    border-radius: 5px;
+    color: #e0e0e0;
+    margin-top: 5px;
+}

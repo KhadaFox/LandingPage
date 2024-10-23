@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function formatPhone(input) {
+            // Remove todos os caracteres que não são dígitos
+            let value = input.value.replace(/\D/g, '');
+            
+            // Verifica o comprimento da entrada e aplica a máscara
+            if (value.length > 10) {
+                value = value.replace(/(\d{2})(\d)(\d{4})(\d{4})/, '($1) $2$3-$4'); // Para 11 dígitos
+            } else if (value.length > 5) {
+                value = value.replace(/(\d{2})(\d)(\d{4})/, '($1) $2$3-'); // Para 10 dígitos
+            } else if (value.length > 2) {
+                value = value.replace(/(\d{2})/, '($1) '); // Para até 2 dígitos
+            }
+            
+            input.value = value; // Atualiza o campo com o valor formatado
+        }
+        </script>
+        
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+    </div>
+</header>
+
+<section class="modulo1">
+    <h2>Quem Somos</h2>
+    <p>Suspendisse at neque consequat, congue ex vitae, eleifend risus. Nam malesuada ut ligula at faucibus. Fusce ornare massa a rutrum interdum. Fusce at sagittis ante, nec tempus augue. Aliquam eu leo venenatis, placerat mauris et, mollis risus. Integer condimentum dolor eu elit dictum, vitae rhoncus ante accumsan. Vestibulum quis dapibus ex. Phasellus gravida ac neque sit amet elementum. Nam id eros volutpat dui vulputate efficitur ut in ex. Sed vitae magna vitae turpis feugiat euismod nec nec leo. Sed eleifend luctus lacus id vehicula. Vivamus neque ipsum, rhoncus quis malesuada consectetur, tincidunt ut metus. Mauris eu ligula volutpat, auctor erat a, gravida lacus. Vivamus pellentesque felis metus, imperdiet consectetur est ornare non. Nam efficitur purus ante, at finibus turpis convallis quis. </p>
+</section>
+
+<section>
+    <h2>Por que Escolher Nosso Produto?</h2>
+    <div class="benefits">
+        <div class="benefit left">
+            <h3>Benefício 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam, tortor sit amet scelerisque cursus, ex felis malesuada libero, eu sagittis nulla ligula quis turpis. Sed tincidunt commodo purus sit amet commodo. Etiam sed justo blandit, vehicula sem in, scelerisque tellus. Etiam pellentesque bibendum dui, et tempus leo auctor quis. Praesent gravida est in facilisis gravida. Duis et dapibus nisl. Nam pulvinar orci vel tempor tristique. Curabitur efficitur, nunc id tincidunt auctor, mauris dui egestas nisi, a commodo tellus sapien id lectus. Morbi sed euismod ante, eget mollis libero. Aenean lacus magna, cursus et mollis eu, tincidunt nec nunc. Nulla ullamcorper nibh eu orci tincidunt hendrerit. Vivamus sed velit augue. Suspendisse potenti. Sed in mi metus.</p>
+        </div>
+        <div class="benefit right">
+            <h3>Benefício 2</h3>
+            <p> Proin at velit ut odio ultrices condimentum. Aenean eget elit lectus. Maecenas et commodo lectus, vel interdum sapien. Etiam eu leo in purus bibendum tristique. Aliquam in libero pharetra, euismod nisi at, aliquet ante. Aenean facilisis, metus quis pulvinar congue, lectus dolor rhoncus felis, nec molestie erat enim a massa. Vivamus et justo egestas massa ornare consectetur et at eros. Duis euismod viverra turpis, non vulputate urna viverra eget. </p>
+        </div>
+        <div class="benefit left">
+            <h3>Benefício 3</h3>
+            <p> Etiam bibendum sit amet ante ut molestie. Praesent efficitur urna ut neque tincidunt finibus. Nam est arcu, varius eu arcu nec, varius placerat mauris. Aenean suscipit dui eu leo aliquet lacinia. Donec eu massa id turpis efficitur viverra. Quisque dictum consequat mauris eu commodo. Cras aliquam lorem nec odio pulvinar, quis auctor nunc pretium. </p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>O Que Nossos Clientes Dizem</h2>
+    <div class="testimonials">
+        <div class="testimonial">
+            <p>"Depoimento de Cliente 1"</p>
+            <span>- Alexandre Mota</span>
+        </div>
+        <div class="testimonial">
+            <p>"Depoimento de Cliente 2"</p>
+            <span>- Ricardo Verstapen</span>
+        </div>
+        <div class="testimonial">
+            <p>"Depoimento de Cliente 3"</p>
+            <span>- Luiza Silva</span>
+        </div>
+    </div>
+</section>
+
+
+<section id="cta">
+    <h2>Pronto para Começar?</h2>
+    <form action="#" method="post" class="cta-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Número de Celular:</label>
+        <input type="text" 
+            id="phone" name="phone" 
+            required placeholder="(00) 00000-0000" 
+            maxlength="15" oninput="formatPhone(this)" 
+            title="Digite no formato (99) 9xxxx-xxxx">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" class="cta-button">Enviar</button>
+    </form>
+</section>
+
+
+
+
+<section id="faq">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-item">
+        <h3 class="faq-question">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h3>
+        <div class="faq-answer" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet urna quis nibh ornare varius. Fusce in sem felis. Pellentesque euismod tristique velit sit amet vestibulum. Quisque ultrices aliquet purus ac egestas. Nulla in ante a neque dignissim consequat id quis urna. Nunc vehicula ante quis odio efficitur facilisis. Mauris a vulputate mauris. </div>
+    </div>
+    <div class="faq-item">
+        <h3 class="faq-question">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h3>
+        <div class="faq-answer" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet urna quis nibh ornare varius. Fusce in sem felis. Pellentesque euismod tristique velit sit amet vestibulum. Quisque ultrices aliquet purus ac egestas. Nulla in ante a neque dignissim consequat id quis urna. Nunc vehicula ante quis odio efficitur facilisis. Mauris a vulputate mauris. </div>
+    </div>
+</section>
+<script>
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isVisible = answer.style.display === 'block';
+
+            // Oculta todas as respostas
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+
+            // Exibe a resposta clicada se não estiver visível
+            answer.style.display = isVisible ? 'none' : 'block';
+        });
+    });
+</script>
+
+
+<footer>
+    <p>&copy; 2024 Nome da Sua Empresa | <a href="#" style="color:white;">Política de Privacidade</a> | <a href="#" style="color:white;">Termos de Uso</a></p>
+</footer>
+
+</body>
+</html>
